@@ -1,4 +1,6 @@
-.footer{
+/* Footer.css */
+
+.footer {
     margin: 10px auto;
     display: flex;
     align-items: center;
@@ -7,27 +9,57 @@
     padding: 15px 0;
 }
 
-.footer ul li{
+.footer p {
+    margin: 0;
+}
+
+.footer ul {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
     list-style: none;
-    display: inline-block;
     margin-left: 20px;
 }
 
+.footer ul li a img {
+    width: 30px; /* Set the desired width */
+    height: 30px; /* Set the desired height */
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
 
+.footer ul li a img:hover {
+    transform: scale(1.1); /* Scale icon on hover */
+}
 
 /* media */
 
-@media (max-width:600px){
-    .footer{
+@media (max-width:600px) {
+    .footer {
         display: block;
         text-align: center;
+        padding: 15px;
     }
 
-    .footer ul li{
-        margin: 10px;
-    }
-
-    .footer ul{
+    .footer ul {
+        justify-content: center;
         margin-top: 10px;
+    }
+
+    .footer ul li {
+        margin: 0 10px;
+    }
+
+    .footer ul li a img {
+        width: 30px; /* Set the desired width */
+        height: 30px; /* Set the desired height */
+        transition: transform 0.3s ease; /* Smooth scaling on hover */
+    }
+    
+    .footer ul li a img:hover {
+        transform: scale(1.1); /* Scale icon on hover */
     }
 }

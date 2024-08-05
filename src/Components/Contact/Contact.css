@@ -51,12 +51,14 @@
     margin-bottom:15px;
     margin-top: 5px;
     resize: none;
+    border-radius: 25px;
 }
 
 .contact-col span{
     display: block;
     margin: 20px 0;
 }
+
 
 /* Media */
 
