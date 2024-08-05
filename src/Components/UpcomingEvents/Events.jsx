@@ -14,7 +14,7 @@ const Events = () => {
                 </div>
             </div>
             <br></br>
-            <p className='Desc'>🚀 Hover your cursor over the image, and with a simple click, you'll be seamlessly guided to register for the event. Enjoy an engaging experience! 💻✨</p>
+            <p className='Desc'>🚀 Hover your cursor over the image, and with a simple click, you'll be seamlessly guided to register for the event. Enjoy an engaging experience! 💻✨ </p>
         </div>
     );
 }

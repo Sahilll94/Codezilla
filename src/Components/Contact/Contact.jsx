@@ -14,7 +14,8 @@ const Contact = () => {
     setResult("Sending The Message.....");
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+    // Reminder to add API Key here and create .env file for the api key.
+    formData.append("access_key", "YOUR_ACCESS_KEY_HERE"); 
 
     const response = await fetch("https://api.web3forms.com/submit", {
     method: "POST",
