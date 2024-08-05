@@ -26,9 +26,9 @@ a{
 .btn{
   background: white;
   color: #212121;
-  padding: 14px 25px;
+  padding: 8px 25px;
   font-size: 16px;
-  border-radius: 30px;
+  border-radius: 50px;
   cursor: pointer;
   border: 0;
   outline: 0;
