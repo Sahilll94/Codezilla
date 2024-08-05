@@ -107,4 +107,14 @@ body {
     align-items: center;
     justify-content: center;
   }
+
+  .btn img{
+    width: 20px;
+    margin-left: 10px;
+  }
+  
+  .dark-btn{
+    background: #212ea0;
+    color: #fff;
+  }
 }
