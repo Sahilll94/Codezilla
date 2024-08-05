@@ -40,7 +40,7 @@ return (
             <p>Feel free to reach out through the contact form or find our contact information below. Your feedback, questions, and suggestions are important to us as we strive to foster a vibrant tech community at our university.</p>
             <ul>
                 <li><a href="mailto:codezillaclub@gmail.com" target='__blank'><img src={MailIcon} alt="" />codezillaclub@gmail.com</a></li>
-                <li><a href='tel:+919427725180'><img src={PhoneIcon} alt="" />+91 9427725180</a></li>
+                <li><a href='tel:+917498133608'><img src={PhoneIcon} alt="" />+91 74981 33608</a></li>
                 <li><img src={LocationIcon} alt="" /><a href='https://maps.app.goo.gl/dKAB8a2sdxysjDxD7' target='__blank'>SRM University,<br /> Bharathi Salai, Ramapuram, Chennai, Tamil Nadu 600089</a></li>
             </ul>
         </div>
