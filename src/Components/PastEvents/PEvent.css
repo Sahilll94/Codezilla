@@ -1,0 +1,54 @@
+.PEvent {
+    margin: 80px auto;
+    width: 90%;
+    text-align: center;
+    overflow-x: scroll; /* Allow horizontal scrolling */
+    white-space: nowrap; /* Prevent images from wrapping to the next line */
+    padding: 0; /* Remove padding if it causes white space */
+    background: transparent; /* Remove the background color */
+    border-radius: 0; /* Remove border radius if needed */
+    box-shadow: none; /* Remove shadow if it affects the background */
+}
+
+.PEvent::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+}
+
+.Event {
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.gallery {
+    display: inline-flex; /* Align images horizontally */
+    align-items: center;
+}
+
+.gallery img {
+    width: 300px; /* Adjust width as needed */
+    border-radius: 10px;
+    margin-right: 20px; /* Space between images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Slightly enlarge image on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.scrollbar {
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+}
+
+/* media */
+
+@media (max-width:800px){
+    .gallery{
+        flex-wrap: wrap;
+    }
+    
+    .gallery img{
+        width: 48%;
+        margin-bottom: 25px;
+    }
+}
