@@ -4,7 +4,7 @@ import logo from '../../assets/CodezillaFavicon.png'
 import logo1 from '../../assets/CodezillaWhite.png'
 import { Link } from 'react-scroll';
 import MenuIcon from '../../assets/menu-icon.png'
-import MenuIcon1 from '../../assets/MenuIcon.png'
+import MenuIcon1 from '../../assets/menu.svg'
 
 
 const Navbar = () => {

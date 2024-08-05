@@ -91,3 +91,20 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #6a11cb #f8f8f8;
 }
+
+
+@media (max-width:430px){
+  .btn{
+    background: white;
+    color: #212121;
+    padding: 8px 20px;
+    font-size: 16px;
+    border-radius: 80px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
