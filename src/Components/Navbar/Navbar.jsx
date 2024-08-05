@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import './Navbar.css'
 import logo from '../../assets/CodezillaFavicon.png'
+import logo1 from '../../assets/CodezillaWhite.png'
 import { Link } from 'react-scroll';
 import MenuIcon from '../../assets/menu-icon.png'
+import MenuIcon1 from '../../assets/MenuIcon.png'
+
 
 const Navbar = () => {
     const [sticky, setSticky] = useState(false);
@@ -21,7 +24,7 @@ const Navbar = () => {
     
 return (
     <nav className={`container ${sticky ? 'dark-nav' : ''}`}>
-        <img src={logo} alt="" className='logo'/>
+        <img src={logo1} alt="" className='logo'/>
         <ul className={mobileMenu ? '' : 'hide-mobile-menu'}>
             <li><Link to='hero container' smooth={true} offset={0} duration={500}>Home</Link></li>
             <li><Link to='Events' smooth={true} offset={-260} duration={500}>Upcoming Event</Link></li>
@@ -30,7 +33,7 @@ return (
             <li><Link to='Members' smooth={true} offset={-260} duration={500}>Club Members</Link></li>
             <li><Link to='contact' smooth={true} offset={-260} duration={500}><button className='btn'>Contact Us</button></Link></li>
         </ul>
-        <img src={MenuIcon} alt="" className='menu-icon' onClick={toggleMenu}/>
+        <img src={MenuIcon1} alt="" className='menu-icon' onClick={toggleMenu}/>
     </nav>
 )
 }
