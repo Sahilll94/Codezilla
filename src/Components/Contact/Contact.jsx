@@ -51,7 +51,7 @@ return (
                 {/* <label>Phone Number</label>
                 <input type="tel" name='phone' placeholder='Enter Your Mobile Number'/> */}
                 <label>Your Email</label>
-                <textarea name="message" placeholder='Enter Your Email Address here' required></textarea>
+                <textarea type="email" name="email" placeholder='Enter Your Email Address here' required></textarea>
                 <label>Write Your Message Here</label>
                 <textarea name="message" rows="6" placeholder='Enter Your Message here' required></textarea>
                 <button type='submit' className='btn dark-btn'> Submit Now <img src={ArrowIcon} alt="" /></button>
