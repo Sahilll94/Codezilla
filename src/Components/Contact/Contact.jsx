@@ -15,7 +15,7 @@ const Contact = () => {
     const formData = new FormData(event.target);
 
     // Reminder to add API Key here and create .env file for the api key.
-    formData.append("access_key", "YOUR_ACCESS_KEY_HERE"); 
+    formData.append("access_key", import.meta.env.VITE_API_KEY); 
 
     const response = await fetch("https://api.web3forms.com/submit", {
     method: "POST",
