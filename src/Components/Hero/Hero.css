@@ -22,7 +22,7 @@
     font-size: 60px;
     font-weight: 600;
     color: #fff; /* Base color */
-    text-shadow: 3px 3px 5px rgba(255, 105, 180, 0.7), -3px -3px 5px rgba(0, 255, 255, 0.7); /* Mixture of colors */
+    /* text-shadow: 3px 3px 5px rgba(255, 105, 180, 0.7), -3px -3px 5px rgba(0, 255, 255, 0.7); Mixture of colors */
 }
 
 .hero-text p{
@@ -30,7 +30,7 @@
     margin: 10px auto 20px;
     line-height: 1.6;
     color: #fff; /* Base color */
-    text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.7), -2px -2px 4px rgba(0, 255, 255, 0.7); /* Mixture of colors */
+    /* text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.7), -2px -2px 4px rgba(0, 255, 255, 0.7); Mixture of colors */
 }
 
 /* media */
