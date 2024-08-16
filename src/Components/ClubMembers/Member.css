@@ -1,6 +1,6 @@
 .Members{
     margin: 80px auto;
-    padding: 0 80px;
+    padding: 0 150px;
     position: relative;
 }
 
@@ -16,6 +16,7 @@
     background: #212EA0;
 }
 
+
 .back-btn{
     right: auto;
     left: 0;
@@ -28,7 +29,7 @@
 
 .slider ul{
     display: flex;
-    width: 350%;
+    width: 200%;
     overflow-x: hidden;
     transition: 0.5s;
 }
@@ -47,10 +48,18 @@
     line-height: 1.4;
 }
 
+.github-icon {
+    width: 20px;  /* Adjust the size as needed */
+    height: auto; 
+    margin-top: 5px;
+    /* Add any other styles specific to the GitHub icon */
+}
+
+
 .slide img{
-    width: 65px;
+    width: 60px;
     border-radius: 50%; 
-    margin-right: 10px;
+    margin-right: 15px;
     border: 4px solid #212EA0;
 }
 

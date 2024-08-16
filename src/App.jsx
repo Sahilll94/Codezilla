@@ -21,12 +21,12 @@ const App = () => {
       <Hero></Hero>
       
       <div className="container">
-      <Title subTitle='UPCOMING EVENT' title='Code Quest'></Title>
+      <Title subTitle='UPCOMING EVENT' title='Open Source Odyssey'></Title>
       <UpcomingEvents></UpcomingEvents> 
       <About setplaystate={setplaystate}></About>
       <Title subTitle='Past Events' title='Journey Through Our Past Events'></Title>
       <PEvent></PEvent> 
-      <Title subTitle='Club Members' title='First, we will meet the club Heads and domain leads, then introduce the members.'></Title>
+      <Title subTitle='Club Members' title='First, we will meet the club Heads, followed by the domain leads.'></Title>
       <Member></Member>
       <Title subTitle='CONTACT US' title='Connect, Collaborate, Create Together.'></Title>
       <Contact></Contact>

@@ -28,7 +28,7 @@ const Contact = () => {
     setResult("Your message has been submitted successfully! Please wait for a while, and we will be in touch with you soon.");
     event.target.reset();
     } else {
-    console.log("Error", data);
+    console.log("Server Side Error!", data);
     setResult(data.message);
     }
 };
