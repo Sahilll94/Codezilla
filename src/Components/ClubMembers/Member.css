@@ -48,12 +48,6 @@
     line-height: 1.4;
 }
 
-.github-icon {
-    width: 20px;  /* Adjust the size as needed */
-    height: auto; 
-    margin-top: 5px;
-    /* Add any other styles specific to the GitHub icon */
-}
 
 
 .slide img{
@@ -99,6 +93,7 @@
         width: 50px;
         border: 3px solid #212EA0;
     }
+    
 }
 
 @media (max-width:600px){

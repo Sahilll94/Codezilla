@@ -13,10 +13,14 @@ return (
         </div>
         <div className="about-right">
             <h3>ABOUT OUR CLUB</h3>
-            <h2>Building Together for a Better Tomorrow</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam praesentium illum natus minus molestiae, dolor consequuntur totam hic possimus doloribus quia id nostrum perferendis quos blanditiis earum sequi vero mollitia?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, facere. Id veniam provident iusto ut, voluptatum dicta deserunt. Sapiente recusandae quod amet maxime quae rerum nam, excepturi enim ullam porro?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, nulla sequi? Facilis nulla id excepturi recusandae pariatur, repudiandae reiciendis, provident dolore praesentium ad sed dignissimos magnam explicabo ipsum rerum quia?</p>
+            <h2>Join Our Building Together Club!</h2>
+            <p>Do you love creating, designing, and building? Whether you're into woodworking, DIY projects, coding, or crafting, our club is the perfect place for makers and innovators like you!</p>
+            <h3>Why Join Us?</h3>
+            <br></br>
+            <p><b>Collaborative Projects:</b> Work on exciting projects with others who share your passion for building. From small DIY tasks to large-scale creations, there’s always something to get your hands on!</p>
+            <p><b>Skill Sharing:</b> Learn new techniques and share your knowledge with fellow builders. Whether you’re a beginner or an expert, everyone has something valuable to contribute.</p>
+            <p><b>Tools & Resources:</b> Gain access to tools, materials, and resources that can help bring your ideas to life.</p>
+            <p><b>Community Support:</b> Be part of a community that supports and inspires each other. Together, we turn ideas into reality!</p>
         </div>
     </div>
 )
