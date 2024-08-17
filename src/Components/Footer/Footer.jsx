@@ -9,7 +9,9 @@ import XIcon from '../../assets/Twitter1.png';
 const Footer = () => {
     return (
         <div className='footer'>
-            <p>© 2024 Codezilla SRMIST. All rights reserved</p>
+            <p>&copy; 2024 Codezilla SRMIST. All rights reserved</p>
+            <p>Made with care by <a href="https://sahilportfolio.me/" target="_blank">Sahil</a></p>
+
             <ul>
                 <li>
                     <a href="https://www.instagram.com/codezillaclub/" target="_blank" rel="noopener noreferrer">
