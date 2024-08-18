@@ -6,8 +6,8 @@ import Ketaki from '../../assets/Ketaki.png'
 import Arya from '../../assets/Arya.png'
 import Sahil from '../../assets/Sahil.png'
 import Animesh from '../../assets/Animesh.jpeg'
-// import Github from '../../assets/Github1.png'
-
+import Devnarayanan from '../../assets/Devanarayanan.jpg'
+import Prathmesh from '../../assets/Prathmesh.png'
 
 const Member = () => {
 
@@ -17,7 +17,7 @@ const Member = () => {
 
     const slideForward = () => {
         // Change karo isko jaise list badhe
-        if(tx > -50){
+        if(tx > -51){
             tx -= 25;
         }
 
@@ -103,33 +103,37 @@ return (
                     </div>
                 </li>
 
+                <li>
+                    <div className="slide">
+                        <div className="user-info">
+                            <img src={Prathmesh} alt="" />
+                            <div>
+                                <h3>Prathmesh Manoj Bajpai</h3>
+                                <span>Design Head</span>
+                                <br></br>
+                                <a href='https://www.linkedin.com/in/prathmesh-bajpai-8429652aa/' target='__onblank'><span><b>Linkedln</b></span></a>
+                            </div>
+                        </div>
+                        <p>I embrace the artistic side of technology. By blending art and tech, I bring imagination into reality. As Design Head for Codezilla, I drive innovation with a creative edge.</p>
+                    </div>
+                </li>
+
+                <li>
+                    <div className="slide">
+                        <div className="user-info">
+                            <img src={Devnarayanan} alt="" />
+                            <div>
+                                <h3>Devanarayanan G</h3>
+                                <span>Content Head</span>
+                                <br></br>
+                                <a href='https://www.linkedin.com/in/devanarayanan-gopakumar-276725261/' target='__onblank'><span><b>Linkedln</b></span></a>
+                            </div>
+                        </div>
+                        <p>As the Content Head of Codezilla, I prioritize providing quality content that supports the goals of our club. I strongly believe that open source has immense potential and will play a crucial role in the future of technology.</p>
+                    </div>
+                </li>
+
                 {/* <li>
-                    <div className="slide">
-                        <div className="user-info">
-                            <img src={Sahil} alt="" />
-                            <div>
-                                <h3>Sahil</h3>
-                                <span>CSE-IOT III year B.Tech</span>
-                            </div>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, vitae, amet corrupti officia mollitia dolore dignissimos, ratione porro eaque sit deserunt. Autem, cupiditate. Odit nesciunt quae natus perferendis enim non!</p>
-                    </div>
-                </li>
-
-                <li>
-                    <div className="slide">
-                        <div className="user-info">
-                            <img src={Sahil} alt="" />
-                            <div>
-                                <h3>Sahil</h3>
-                                <span>CSE-IOT III year B.Tech</span>
-                            </div>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, vitae, amet corrupti officia mollitia dolore dignissimos, ratione porro eaque sit deserunt. Autem, cupiditate. Odit nesciunt quae natus perferendis enim non!</p>
-                    </div>
-                </li>
-
-                <li>
                     <div className="slide">
                         <div className="user-info">
                             <img src={Sahil} alt="" />
