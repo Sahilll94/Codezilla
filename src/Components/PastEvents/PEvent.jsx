@@ -1,9 +1,9 @@
 import React from 'react'
 import './PEvent.css'
-import PastEvent1 from '../../assets/PE1.png'
-import PastEvent2 from '../../assets/PE2.png'
-import PastEvent3 from '../../assets/PE3.png'
-import PastEvent4 from '../../assets/PE4.png'
+import PastEvent2 from '../../assets/PE1.png'
+import PastEvent3 from '../../assets/PE2.png'
+import PastEvent4 from '../../assets/PE3.png'
+import PastEvent1 from '../../assets/OpenSourceOdyssey.jpg'
 
 const PEvent = () => {
 return (
