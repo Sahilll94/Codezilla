@@ -21,7 +21,7 @@ const App = () => {
       <Hero></Hero>
       
       <div className="container">
-      <Title subTitle='UPCOMING EVENT' title='Open Source Odyssey'></Title>
+      <Title subTitle='UPCOMING EVENT' title='Oops! It Looks Like We Have No Upcoming Events!'></Title>
       <UpcomingEvents></UpcomingEvents> 
       <About setplaystate={setplaystate}></About>
       <Title subTitle='Past Events' title='Journey Through Our Past Events'></Title>

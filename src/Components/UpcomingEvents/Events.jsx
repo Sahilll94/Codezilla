@@ -15,7 +15,8 @@ const Events = () => {
                 </div>
             </div>
             <br></br>
-            <p className='Desc'>Big things are coming! Stay tuned for upcoming events that we're planning just for you. </p>
+            <p><b>Exciting Times Ahead!</b></p>
+            <p className='Desc'>Big things are on the way! Stay tuned for the incredible events we’re crafting just for you! Your next adventure awaits! 🚀 </p>
         </div>
     );
 }
