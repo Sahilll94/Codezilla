@@ -1,6 +1,6 @@
 import React from 'react';
 import './Events.css';
-import EventPoster from '../../assets/NoUpcomingEvent.png';
+import EventPoster from '../../assets/UpEvent.png';
 import EventIcon from '../../assets/program-icon-3.png';
 
 const Events = () => {
