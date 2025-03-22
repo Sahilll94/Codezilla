@@ -9,7 +9,7 @@ const PEvent = () => {
 return (
     <div className='PEvent'>
         <div className="gallery">
-            <img src={PastEvent1} alt="" />
+            {/* <img src={PastEvent1} alt="" /> */}
             <img src={PastEvent2} alt="" />
             <img src={PastEvent3} alt="" />
             <img src={PastEvent4} alt="" />
