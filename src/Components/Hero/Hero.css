@@ -1,7 +1,7 @@
 .hero {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(rgba(8,0,58,0.5), rgba(8,0,58,0.5)), url('../../assets/bgImageHero.jpg');
+    background: linear-gradient(rgba(8,0,58,0.6), rgba(8,0,58,0.6)), url('../../assets/bgImageHero.jpg');
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -10,27 +10,115 @@
     justify-content: center;
     padding-top: 20px;
     padding-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.3) 100%);
+    pointer-events: none;
 }
 
 .hero-text{
     text-align: center;
     max-width: 800px;
     margin-top: -50px;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-text h1{
     font-size: 60px;
     font-weight: 600;
-    color: #fff; /* Base color */
-    /* text-shadow: 3px 3px 5px rgba(255, 105, 180, 0.7), -3px -3px 5px rgba(0, 255, 255, 0.7); Mixture of colors */
+    color: #fff;
+    text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+    animation: glow 4s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+                     0 0 30px rgba(33, 46, 160, 0.5);
+    }
+}
+
+.typing-text {
+    display: inline-block;
+}
+
+.cursor {
+    display: inline-block;
+    margin-left: 3px;
+    width: 3px;
+    animation: blink 1s step-end infinite;
+}
+
+.cursor-visible {
+    opacity: 1;
+}
+
+.cursor-hidden {
+    opacity: 0;
+}
+
+@keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
 }
 
 .hero-text p{
     max-width: 700px;
-    margin: 10px auto 20px;
-    line-height: 1.6;
-    color: #fff; /* Base color */
-    /* text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.7), -2px -2px 4px rgba(0, 255, 255, 0.7); Mixture of colors */
+    margin: 20px auto 30px;
+    line-height: 1.8;
+    color: #fff;
+    font-size: 18px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    opacity: 0.9;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+.scroll-indicator span {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.scroll-arrow {
+    font-size: 24px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
 }
 
 /* media */

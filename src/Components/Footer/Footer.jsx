@@ -10,7 +10,7 @@ const Footer = () => {
     return (
         <div className='footer'>
             <p>&copy; 2024 Codezilla SRMIST. All rights reserved</p>
-            <p>Made with care by <a href="https://sahilportfolio.me/" target="_blank"><b>Sahil</b></a></p>
+            <p>Made with care by <a href="https://sahilfolio.live/" target="_blank"><b>Sahil</b></a></p>
 
             <ul>
                 <li>

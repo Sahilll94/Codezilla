@@ -4,12 +4,26 @@
     align-items: center;
     justify-content: space-between;
     width: 90%;
+    overflow: hidden;
+    padding: 20px 0;
 }
 
 .about-left{
     flex-basis: 40%;
     position: relative;
+}
 
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: all 0.4s ease;
+}
+
+.image-container:hover {
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    transform: translateY(-5px);
 }
 
 .about-right{
@@ -18,16 +32,86 @@
 
 .about-img{
     width: 100%;
-    border-radius: 10px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    filter: brightness(0.95);
+}
+
+.about-img:hover {
+    filter: brightness(1.05);
 }
 
 .play-icon{
-    width: 60px;
+    width: 70px;
+    height: 70px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     cursor: pointer;
+    background-color: rgba(33, 46, 160, 0.8);
+    border-radius: 50%;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.about-subtitle {
+    color: #212ea0;
+    font-size: 18px;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+}
+
+.about-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    background: linear-gradient(90deg, #212121, #212ea0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.about-intro {
+    margin-bottom: 25px;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.about-why-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #212ea0;
+}
+
+.about-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.feature-item {
+    padding: 15px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.dark-theme .feature-item {
+    background: #2a2a2a;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.feature-item h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #212ea0;
 }
 
 @media (max-width:800px){

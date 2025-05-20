@@ -1,0 +1,70 @@
+.theme-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle input {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+.toggle-label {
+  cursor: pointer;
+  width: 50px;
+  height: 25px;
+  background: #f5f5f5; /* Light mode (unchecked) - light background */
+  border: 2px solid #001f3f;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+  transition: 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-label:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 19px;
+  height: 19px;
+  background: #FFC107; /* Sun color for light mode indicator */
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input:checked + .toggle-label {
+  background: #001f3f; /* Dark mode (checked) - dark background */
+}
+
+input:checked + .toggle-label:after {
+  left: calc(100% - 3px);
+  transform: translateX(-100%);
+  background: #ffffff; /* Moon color for dark mode indicator */
+}
+
+.toggle-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  z-index: 1;
+}
+
+/* Add a transition hint for users */
+.toggle-label:hover:after {
+  transform: scale(1.1);
+}
+
+/* Ensure toggle is visible in all contexts */
+.dark-theme .toggle-label {
+  border-color: #f5f5f5;
+}
+
+/* Style for the toggle icon to ensure visibility */
+.toggle-icon {
+  font-size: 12px;
+}
