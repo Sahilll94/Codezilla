@@ -68,7 +68,7 @@ const App = () => {
       
       <div className="container">
       <Title subTitle='UPCOMING EVENT' title='Hey, register for the upcoming event 404! Logic Not Found and showcase your coding skills.'></Title>
-      <UpcomingEvents></UpcomingEvents> 
+      <UpcomingEvents darkMode={darkMode}></UpcomingEvents> 
       <About setplaystate={setplaystate}></About>
       <Title subTitle='Past Events' title='Journey Through Our Past Events'></Title>
       <PEvent></PEvent> 

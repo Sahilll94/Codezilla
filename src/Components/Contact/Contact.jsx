@@ -14,12 +14,13 @@ const Contact = () => {
         name: '',
         email: '',
         message: ''
-    });
-    const [isFocused, setIsFocused] = useState({
+    });    const [isFocused, setIsFocused] = useState({
         name: false,
         email: false,
         message: false
     });
+    
+    const [formSubmitted, setFormSubmitted] = useState(false);
     
     const [contactRef, inView] = useInView({
         triggerOnce: true,
@@ -47,9 +48,16 @@ const Contact = () => {
             [field]: false
         });
     };
-    
-    const onSubmit = async (event) => {
+      const onSubmit = async (event) => {
         event.preventDefault();
+        setFormSubmitted(true);
+        
+        if (!event.target.checkValidity()) {
+            // Form has validation errors
+            setResult("Please fill all required fields correctly.");
+            return;
+        }
+        
         setResult("Sending The Message.....");
         const formDataObj = new FormData(event.target);
 
@@ -67,6 +75,7 @@ const Contact = () => {
             if (data.success) {
                 setResult("Your message has been submitted successfully! Please wait for a while, and we will be in touch with you soon.");
                 setFormData({ name: '', email: '', message: '' });
+                setFormSubmitted(false);
                 event.target.reset();
             } else {
                 console.log("Server Side Error!", data);
@@ -183,12 +192,13 @@ const Contact = () => {
                 initial={{ opacity: 0, x: 50 }}
                 animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
                 transition={{ duration: 0.8 }}
-            >
-                <motion.form 
+            >                <motion.form 
                     onSubmit={onSubmit}
                     variants={containerVariants}
                     initial="hidden"
                     animate={inView ? "visible" : "hidden"}
+                    className={formSubmitted ? "submitted" : ""}
+                    noValidate
                 >
                     <motion.div className="form-group" variants={formItemVariants}>
                         <label className={isFocused.name || formData.name ? "label-active" : ""}>Your Name</label>

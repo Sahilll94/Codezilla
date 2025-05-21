@@ -193,6 +193,26 @@ form label.label-active {
     transform: translateY(0);
 }
 
+/* Remove default browser validation styling */
+.contact form input:required,
+.contact form textarea:required {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.contact form input:invalid,
+.contact form textarea:invalid {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+/* Custom validation styling when form is submitted */
+.contact form.submitted input:invalid,
+.contact form.submitted textarea:invalid {
+    border-color: #ff5252;
+    box-shadow: 0 0 0 2px rgba(255, 82, 82, 0.2);
+}
+
 /* Media */
 
 @media (max-width:700px){
