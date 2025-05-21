@@ -117,15 +117,67 @@
 @media (max-width:800px){
     .about{
         flex-direction: column;
+        gap: 30px;
+        margin: 60px auto;
     }
 
     .about-left{
         flex-basis: 100%;
-        margin: 20px;
-        order: 2;
+        margin: 20px auto;
+        order: 1; /* Show image first on mobile for better engagement */
+        max-width: 450px;
     }
 
     .about-right{
         flex-basis: 100%;
+        padding: 0 15px;
+    }
+    
+    /* Enhanced play button for mobile */
+    .play-icon{
+        width: 80px;
+        height: 80px;
+        padding: 20px;
+    }
+    
+    /* Increased spacing and readability */
+    .about-title {
+        font-size: 30px;
+    }
+    
+    .about-intro {
+        margin-bottom: 35px;
+    }
+    
+    /* Better grid layout for mobile features */
+    .about-features {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    /* Better touch interaction */
+    .feature-item {
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Specific enhancements for very small screens */
+@media (max-width:480px){
+    .about {
+        margin: 40px auto;
+    }
+    
+    .about-title {
+        font-size: 26px;
+    }
+    
+    .about-subtitle {
+        font-size: 16px;
+    }
+    
+    /* Make the play button more prominent */
+    .play-icon {
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
     }
 }

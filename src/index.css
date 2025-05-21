@@ -145,35 +145,107 @@ a:hover {
 }
 
 
-
-/* Customize the scrollbar */
-::-webkit-scrollbar {
-  width: 0.1px;
+/* Mobile-specific enhancements */
+@media screen and (max-width: 768px) {
+  /* Larger touch targets */
+  button, a, input[type="button"], input[type="submit"] {
+    min-height: 44px; /* Apple's recommended minimum touch target size */
+  }
+  
+  /* Improved scroll experience */
+  html, body {
+    scroll-padding-top: 70px; /* Ensures content doesn't hide under fixed header */
+    overscroll-behavior-y: contain; /* Prevents "pull to refresh" on mobile */
+  }
+  
+  /* Enhanced button feedback on touch */
+  .btn:active {
+    transform: scale(0.97);
+    transition: transform 0.1s;
+  }
+  
+  /* Optimized dark mode for mobile screens */
+  .dark-theme .scroll-to-top-btn {
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.15);
+  }
+  
+  /* Larger scroll-to-top button on mobile */
+  .scroll-to-top-btn {
+    width: 56px;
+    height: 56px;
+    font-size: 28px;
+    bottom: 25px;
+    right: 25px;
+  }
+  
+  /* Better tap feedback for interactive elements */
+  a:active, button:active {
+    opacity: 0.7;
+    transition: opacity 0.1s;
+  }
+  
+  /* Reduced motion option for users who prefer it */
+  @media (prefers-reduced-motion) {
+    * {
+      animation-duration: 0.001ms !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
 }
 
-::-webkit-scrollbar-track {
-  background: linear-gradient(180deg, #e0e0e0, #f8f8f8);
-  border-radius: 10px;
+/* Touch device specific styles */
+.touch-device a:active,
+.touch-device button:active,
+.touch-device .btn:active {
+  transform: scale(0.97);
 }
 
-/* No use right now but if I increase the width then it will look good */
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #6a11cb, #2575fc);
-  border-radius: 10px;
-  border: 3px solid #f1f1f1;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+.touch-device .touch-active {
+  opacity: 0.8;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #5e0acc, #2465ff);
+/* Fix for mobile viewport height issue */
+.hero {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 }
 
-/* For Firefox */
-body {
-  scrollbar-width: thin;
-  scrollbar-color: #6a11cb #f8f8f8;
+/* Additional mobile optimizations */
+@media (max-width: 480px) {
+  /* Larger bottom padding to account for mobile browser chrome */
+  body {
+    padding-bottom: env(safe-area-inset-bottom, 20px);
+  }
+  
+  /* Prevent text selection when tapping quickly on mobile */
+  nav, .btn, button {
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Enhance scrolling experience */
+  html {
+    scroll-padding-top: 70px;
+  }
+  
+  /* Fix mobile safari elastic scroll issues */
+  html, body {
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+  }
 }
 
+/* Improved keyboard accessibility for desktop when navigating with keyboard */
+:focus-visible {
+  outline: 3px solid #212ea0;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.dark-theme :focus-visible {
+  outline-color: #6d7adb;
+}
 
 @media (max-width:430px){
   .btn{

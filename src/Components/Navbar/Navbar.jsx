@@ -10,18 +10,22 @@ import { motion } from 'framer-motion'
 
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
-    const [sticky, setSticky] = useState(false);
-
-    useEffect(() => {
+    const [sticky, setSticky] = useState(false);    useEffect(() => {
         window.addEventListener('scroll', () => {
             window.scrollY > 700 ? setSticky(true) : setSticky(false);
-        })
-    }, [])
-
+        });
+    }, []);
+    
     const [mobileMenu, setMobileMenu] = useState(false);
 
     const toggleMenu = () => {
         setMobileMenu(!mobileMenu);
+        // Prevent body scrolling when menu is open
+        if (!mobileMenu) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
     }
     
     const navVariants = {
@@ -51,31 +55,36 @@ return (
         initial="hidden"
         animate="visible"
         variants={navVariants}
-    >        <motion.img 
+    >
+        <motion.img 
             src={darkMode ? logo1 : logo} 
             alt="Codezilla Logo" 
             className='logo'
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
         />
+        
+        {/* Mobile Menu Backdrop */}
+        <div className={`menu-backdrop ${mobileMenu ? 'active' : ''}`} onClick={toggleMenu}></div>
+        
         <ul className={mobileMenu ? 'mobile-menu-active' : 'hide-mobile-menu'}>
             <motion.li variants={itemVariants}>
-                <Link to='hero container' smooth={true} offset={0} duration={500}>Home</Link>
+                <Link to='hero container' smooth={true} offset={0} duration={500} onClick={toggleMenu}>Home</Link>
             </motion.li>
             <motion.li variants={itemVariants}>
-                <Link to='Events' smooth={true} offset={-260} duration={500}>Upcoming Event</Link>
+                <Link to='Events' smooth={true} offset={-260} duration={500} onClick={toggleMenu}>Upcoming Event</Link>
             </motion.li>
             <motion.li variants={itemVariants}>
-                <Link to='about' smooth={true} offset={-150} duration={500}>About Our Club</Link>
+                <Link to='about' smooth={true} offset={-150} duration={500} onClick={toggleMenu}>About Our Club</Link>
             </motion.li>
             <motion.li variants={itemVariants}>
-                <Link to='PEvent' smooth={true} offset={-260} duration={500}>Past Events</Link>
+                <Link to='PEvent' smooth={true} offset={-260} duration={500} onClick={toggleMenu}>Past Events</Link>
             </motion.li>
             <motion.li variants={itemVariants}>
-                <Link to='Members' smooth={true} offset={-260} duration={500}>Club Members</Link>
+                <Link to='Members' smooth={true} offset={-260} duration={500} onClick={toggleMenu}>Club Members</Link>
             </motion.li>
             <motion.li variants={itemVariants}>
-                <Link to='contact' smooth={true} offset={-260} duration={500}>
+                <Link to='contact' smooth={true} offset={-260} duration={500} onClick={toggleMenu}>
                     <motion.button 
                         className='btn'
                         whileHover={{ scale: 1.05 }}
@@ -89,14 +98,13 @@ return (
                 <ThemeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
             </motion.li>
         </ul>
-        <motion.img 
-            src={MenuIcon1} 
-            alt="Menu" 
-            className='menu-icon' 
-            onClick={toggleMenu}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-        />
+        
+        {/* Hamburger Menu Icon */}
+        <div className={`menu-toggle-container ${mobileMenu ? 'menu-active' : ''}`} onClick={toggleMenu}>
+            <div className="menu-bar menu-bar-1"></div>
+            <div className="menu-bar menu-bar-2"></div>
+            <div className="menu-bar menu-bar-3"></div>
+        </div>
     </motion.nav>
 )
 }

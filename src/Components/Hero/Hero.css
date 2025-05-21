@@ -130,15 +130,58 @@
 }
 
 @media (max-width:650px){
+    .hero {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
     .hero-text h1{
-        font-size: 30px;
-        max-width: 400px;
+        font-size: 28px;
+        max-width: 100%;
         margin: auto;
-
+        letter-spacing: 0.5px;
     }
 
     .hero-text p{
-        font-size: 14px;
-        margin: 15px auto 30px;
+        font-size: 16px;
+        margin: 20px auto 30px;
+        line-height: 1.6;
+    }
+    
+    /* More interactive button on mobile */
+    .hero-text .btn {
+        display: flex;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 15px 20px;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Enhanced scroll indicator for mobile */
+    .scroll-indicator {
+        bottom: 60px;
+    }
+    
+    .scroll-indicator span {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    
+    .scroll-arrow {
+        font-size: 28px;
+    }
+    
+    /* Better typing animation on mobile */
+    .cursor {
+        width: 2px;
+    }
+    
+    /* Touch-friendly interactions */
+    .hero-text a {
+        display: block; /* Larger touch target */
     }
 }
