@@ -61,7 +61,7 @@ const hero = () => {
               whileHover={{ scale: 1.05, boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.2)" }}
               whileTap={{ scale: 0.95 }}
             >
-              <b>🚀 Code Quest : Prove your brilliance— Register Now!</b>
+              <b>🚀 Open Source Odyssey : Prove your brilliance— Register Now!</b>
               <img src={arrow} alt="" />
             </motion.button>
           </a>
